@@ -94,4 +94,41 @@ describe('is.nan', function () {
   });
 
 });
+
+
+///////
+
+
+describe('is.null',function(){
+		it('should return true if passed parameter type is null',function(){
+			var argumdents = null;
+			expect(is.null(argumdents)).to.be.true;
+		});
+		it("should return false if passed parameter type is not null", function () {
+			var notArguments = 'test';
+		expect(is.null(notArguments)).to.be.false;
+		});
+	});
+
+	describe('is.number',function(){
+		it('should return true if passed parameter type is number',function(){
+			var argumdents = 1;
+			expect(is.number(argumdents)).to.be.true;
+		});
+		it("should return false if passed parameter type is not number", function () {
+			var notArguments = 'test';
+		expect(is.number(notArguments)).to.be.false;
+		});
+	});
+
+	describe('is.object',function(){
+		it('should return true if passed parameter type is object',function(){
+			var argumdents = {nom:"a"};
+			expect(is.object(argumdents)).to.be.true;
+		});
+		it("should return false if passed parameter type is not object", function () {
+			var notArguments = 'test';
+		expect(is.object(notArguments)).to.be.false;
+		});
+	});
 });
